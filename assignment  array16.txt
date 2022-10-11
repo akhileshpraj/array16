@@ -1,0 +1,389 @@
+1
+#include<stdio.h>
+int main()
+{
+    int i,j,r,k,c,a[50][50],b[50][50],sum[50][50];
+    printf("enter the row and columns of the matrices:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter the 1st element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("2nd row amd column");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+             printf("enter the 2nd element %d%d :-",i,j);
+             scanf("%d",&b[i][j]);
+        }
+    }
+    printf("\n1st matrices\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+         printf("%d\t",a[i][j]);
+        }
+    }
+    printf("\n2nd matrices\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+         printf("%d\t",b[i][j]);
+        }
+    }
+    printf("\naddition of the matrices\n");
+        for(i=0;i<r;i++)
+     {
+         printf("\n");
+            for(j=0;j<c;j++)
+            {
+                sum[i][j]=a[i][j]+b[i][j];
+                  printf("%d\t",sum[i][j]);
+            }
+     }
+   printf("\n\n");
+    return 0;
+}
+2
+#include<stdio.h>
+int main()
+{
+    int i,j,k,r,c,a[50][50],b[50][50],p[50][50],sum=0;
+    printf("enter a row & column:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n");
+    for(i=0;i<r;i++)
+    {
+     for(j=0;j<c;j++)
+        {
+            printf("enter the element %d%d:-",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("\n1stmatrices");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+     for(j=0;j<c;j++)
+        {
+            printf("%d  ",a[i][j]);
+        }
+    }
+     printf("\n2ndmatrices");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+     for(j=0;j<c;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            for(k=0;k<r;k++)
+            {
+                for(k=0;k<c;k++)
+                {
+                    sum=sum+a[i][k]*b[k][j];
+                }
+                p[i][j]=sum;
+                sum=0;
+            }
+               
+        }
+    }
+    printf("\nproduct of the matrices");
+    for(i=0;i<r;i++)
+    {
+     printf("\n");
+     for(j=0;j<c;j++)
+        {
+        printf("%d ",p[i][j]);
+        }
+    }
+    printf("\n\n");
+}
+3
+#include<stdio.h>
+int main()
+{
+    int a[100][100],b[100][100],i,j,n,x;
+    printf("enter the row and column of the matrices:- ");
+    scanf("%d %d",&n,&x);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<x;j++)
+        {
+            printf("enter the element:- %d%d ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("matrices");
+    for(i=0;i<n;i++)
+    {
+        printf("\n");
+        for(j=0;j<x;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<x;j++)
+        {
+            b[j][i]=a[i][j];
+        }
+    }
+    printf("\ntranspose matrices\n");
+    for(i=0;i<n;i++)
+    {
+        printf("\n");
+        for(j=0;j<x;j++)
+        {
+            printf("%d\t",b[i][j]);
+        }
+    }
+    printf("\n\n");
+}
+4
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,a[50][50];
+    int sumdig=0;
+    printf("enter the row and column:-");
+    scanf("%d %d",&r,&c);  
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("\nenter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+            {
+                if(i+j==2)
+                {
+                    sumdig=sumdig+a[i][j];
+                }
+            }
+        }
+    }
+    printf("\nprint this matrix");
+     for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+    }
+    printf("sum of right digonal is %d\n",sumdig);
+
+}
+5
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,a[50][50];
+    int sumdig=0;
+    printf("enter the row and column:-");
+    scanf("%d %d",&r,&c);  
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("\nenter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+            {
+                 if(i==j)
+                 {
+                    sumdig=sumdig+a[i][j];
+                 }
+            }
+        }
+    }
+    printf("\nprint this matrix");
+     for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+    }
+     printf("sum of right digonal is %d\n",sumdig);
+}
+6
+#include<stdio.h>
+int main()
+{
+    int  i,j,r,c,a[50][50],col,row;
+    printf("enter the row and column:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+           printf("%d ",a[i][j]);
+        }
+    }
+    printf("\naddition of the row and column matrix\n");
+     for(i=0;i<r;i++)
+    {
+        row=col=0;
+        for(j=0;j<c;j++)
+        {
+            row=row+a[i][j];
+            col=col+a[j][i];
+        }
+           printf("\nrow=%d,col=%d\n",row,col);
+    }
+
+}
+7
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,a[50][50];
+    printf("enter this row and column:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\nprint this matrx\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+    }
+    printf("\nthis is a lower tringle matrix\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            if(i<=j)
+            {
+                printf("%d\t",a[i][j]);
+            }
+                else
+                {
+                printf("%d\t",0);
+                }
+        }
+    }
+}
+8
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,a[50][50];
+    printf("enter this row and column:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter the element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\nprint this matrx\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+    }
+    printf("\nthis is a lower tringle matrix\n");
+    for(i=0;i<r;i++)
+    {
+        printf("\n");
+        for(j=0;j<c;j++)
+        {
+            if(i>=j)
+            {
+                printf("%d\t",a[i][j]);
+            }
+                else
+                {
+                printf("%d\t",0);
+                }
+        }
+    }
+}
+9
+#include<stdio.h>
+int main()
+{
+    int i,j,r,c,a[50][50],count=0;
+    printf("enter a roe & column:-");
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter element %d%d:-",i,j);
+            scanf("%d",&a[i][j]);
+            if(a[i][j]==0)
+            {
+            count++;
+            }
+        }
+    }
+         if((count>(r*c)/2))
+         {
+         printf("\nsparx matrix");
+         }
+         else
+         printf("\n not sparx matrix\n");
+}
+10
+
+
+
+
+
+
+
+
+
+
